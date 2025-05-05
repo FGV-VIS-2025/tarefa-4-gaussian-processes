@@ -31,6 +31,7 @@
     ];
     var selectedKernelIndex = 0;
     var desc = kernelDescriptions[selectedKernelIndex].Description;
+    var formulaPath = kernelDescriptions[selectedKernelIndex].Formula_Path;
 
     function draw_kernel_func(data) {
         if (svg) {
@@ -88,7 +89,7 @@
         selectedKernelIndex = index;
         drawNewKernel();
         desc = kernelDescriptions[selectedKernelIndex].Description;
-        console.log(desc)
+        formulaPath = kernelDescriptions[selectedKernelIndex].Formula_Path;
     }
   
     onMount(() => {
@@ -137,6 +138,7 @@
         <div class="kernel-description">
             <p>{desc}</p>
         </div>
+        <img src={formulaPath} alt="illustration" class="corner-figure" />
         <!-- <div class="kernel-formula" id="kernel-formula">
             <p>${formula}$</p>
         </div> -->

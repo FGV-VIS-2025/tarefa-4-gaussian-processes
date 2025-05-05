@@ -2,21 +2,25 @@
     {
         "Name": "RBF",
         "Description": "The RBF kernel is a stationary kernel. It is also known as the “squared exponential” kernel. It is parameterized by a length-scale parameter l>0, which can either be a scalar (isotropic variant of the kernel) or a vector with the same number of dimensions as the inputs x (anisotropic variant of the kernel). ",
-        "Formula": "k(x_i, x_j) = \\text{exp}\\left(- \\frac{d(x_i, x_j)^2}{2l^2} \\right)"
+        "Formula": "k(x_i, x_j) = \\text{exp}\\left(- \\frac{d(x_i, x_j)^2}{2l^2} \\right)",
+        "Formula_Path": "formulas/rbf.png"
     },
     {
         "Name": "Matern",
         "Description": "The Matern kernel is a stationary kernel and a generalization of the RBF kernel. It has an additional parameter v which controls the smoothness of the resulting function. It is parameterized by a length-scale parameter l>0, which can either be a scalar (isotropic variant of the kernel) or a vector with the same number of dimensions as the inputs (anisotropic variant of the kernel).",
-        "Formula": "k(x_i, x_j) = \\exp \\Bigg(- \\frac{1}{l} d(x_i , x_j ) \\Bigg) \\quad \\quad \\nu= \tfrac{1}{2}"
+        "Formula": "k(x_i, x_j) = \\exp \\Bigg(- \\frac{1}{l} d(x_i , x_j ) \\Bigg) \\quad \\quad \\nu= \tfrac{1}{2}",
+        "Formula_Path": "formulas/matern.png"
     },
     {
         "Name": "Periodic",
         "Description": "The periodic kernel recognizes ciclic patterns in the data. It is able to model data with repretitive behavior.",
-        "Formula": "k_{\\text{per}}(x, x') = \\exp\\left(-\\frac{2 \\sin^2\\left( \\frac{\\pi |x - x'|}{p} \\right)}{\\ell^2} \\right)"
+        "Formula": "k_{\\text{per}}(x, x') = \\exp\\left(-\\frac{2 \\sin^2\\left( \\frac{\\pi |x - x'|}{p} \\right)}{\\ell^2} \\right)",
+        "Formula_Path": "formulas/periodic.png"
     },
     {
         "Name": "Polynomial",
         "Description": "The polynomial kernel measures how similar two vectors are in a polynomial space. ",
-        "Formula": "k(x_i, x_j) = (\\alpha x_i^T x_j + c)^d"
+        "Formula": "k(x_i, x_j) = (\\alpha x_i^T x_j + c)^d",
+        "Formula_Path": "formulas/polynomial.png"
     }
 ]
